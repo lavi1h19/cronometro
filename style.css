@@ -64,17 +64,8 @@ body {
         display: flex;
     }
 
-    .botao {
-        border-radius: 0;
-        border-bottom: 4px solid var(--botao-ativo);
-        border-left: none;
-        border-right: 4px solid var(--botao-ativo);
-        border-top: none;
-    }
-
-    .botao:first-child {
+   .botao:first-child {
         border-radius: 40px 0 0 40px;
-        border-left: 2px solid var(--botao-ativo);
     }
 
     .botao:last-child {
