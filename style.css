@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
-
 :root {
-    --cor-de-fundo: #1e1e1e;
-    --verde: #6fff57;
+    --cor-de-fundo: #ffffff;
     --branco: #ffffff;
-    --botao-ativo: #3a375e;
-    --botao-inativo: rgba(58, 55, 94, 0.5);
-    --texto-fundo: rgba(58, 55, 94, 0.3);
+    --verde: #20c997;
+    --botao-inativo: #f8f9fa;
+    --botao-ativo: #0d6efd;
+    --texto-fundo: #f8f9fa;
+    --cor-texto: #212529;
 }
 
 body {
     background-color: var(--cor-de-fundo);
-    color: var(--branco);
-    font-family: "Chakra Petch", sans-serif;
+    color: var(--cor-texto);
+    font-family: 'Chakra Petch', sans-serif;
 }
+
 
 .conteudo-principal {
     display: flex;
@@ -35,10 +35,11 @@ body {
     color: var(--verde);
 }
 
+
 .botao {
-    font-family: "Chakra Petch", sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
-    color: var(--branco);
+    color: var(--cor-texto);
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -59,20 +60,51 @@ body {
     display: block;
 }
 
+
+.botao.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+    color: var(--branco);
+}
+
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display:block;
+}
+
+.aba-conteudo{
+    display: none;
+}
+
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
 @media screen and (min-width: 768px) {
     .botoes {
         display: flex;
     }
 
-   .botao:first-child {
-        border-radius: 40px 0 0 40px;
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
     }
 
     .botao:last-child {
-        border-radius: 0 40px 40px 0;
+        border-radius: 0 40px 0 0;
     }
-}
-.ativo {
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
+  }
+  
+  .contador {
+  font-size: 20px;
+  text-align: center;
 }
